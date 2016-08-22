@@ -1,5 +1,5 @@
 #
-# FIXME: clang fails at linking time because it 
+# FIXME: clang fails at linking time because it
 #	 still has some probems with openmp
 #
 
@@ -201,7 +201,7 @@ do
 done
 
 # locale files
-%find_lang %{name} --with-man
+%find_lang %{name} --all-name
 
 %check
 # .desktop file
