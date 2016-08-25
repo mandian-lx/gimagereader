@@ -6,7 +6,7 @@
 %define tname gImageReader
 %define oname %(echo %{tname} | tr [:upper:] [:lower:] )
 
-Summary:	A graphical frontend to tesseract-ocr
+Summary:	A simple Gtk/Qt front-end to tesseract-ocr.
 Name:		%{oname}
 Version:	3.1.2
 Release:	0
@@ -43,17 +43,17 @@ BuildRequires:	qtspell-qt5-devel #pkgconfig(QtSpell-qt5)
 Requires:	hicolor-icon-theme
 
 %description
-# from the homepage
-gImageReader is a simple front-end to tesseract. Features include:
+gImageReader is a simple Gtk/Qt front-end to tesseract-ocr.
 
-  · Automatic page layout detection
-  · User can manually define and adjust recognition regions
-  · Import images from disk, scanning devices, clipboard and screenshots
-  . Supports multipage PDF documents
+Features include:
+
+  · Import PDF documents and images from disk, scanning devices, clipboard and screenshots
+  · Process multiple images and documents in one go
+  · Manual or automatic recognition area definition
+  · Recognize to plain text or to hOCR documents
   · Recognized text displayed directly next to the image
-  · Basic editing of output text, including search/replace and removing
-    line breaks
-  · Spellchecking for output text (if corresponding dictionary installed)
+  · Post-process the recognized text, including spellchecking
+  · Generate PDF documents from hOCR documents
 
 #----------------------------------------------------------------------------
 
@@ -62,16 +62,17 @@ Summary:	A Gtk+ front-end to tesseract-ocr
 Requires:	%{name}-shared = %{version}-%{release}
 
 %description gtk
-gImageReader is a simple front-end to tesseract. Features include:
+gImageReader is a simple Gtk/Qt front-end to tesseract-ocr.
 
-  · Automatic page layout detection
-  · User can manually define and adjust recognition regions
-  · Import images from disk, scanning devices, clipboard and screenshots
-  . Supports multipage PDF documents
+Features include:
+
+  · Import PDF documents and images from disk, scanning devices, clipboard and screenshots
+  · Process multiple images and documents in one go
+  · Manual or automatic recognition area definition
+  · Recognize to plain text or to hOCR documents
   · Recognized text displayed directly next to the image
-  · Basic editing of output text, including search/replace and removing
-    line breaks
-  · Spellchecking for output text (if corresponding dictionary installed)
+  · Post-process the recognized text, including spellchecking
+  · Generate PDF documents from hOCR documents
 
 This package contains the Gtk+ front-end.
 
@@ -88,16 +89,17 @@ Summary:	A Qt4 front-end to tesseract-ocr
 Requires:	%{name}-shared = %{version}-%{release}
 
 %description qt4
-gImageReader is a simple front-end to tesseract. Features include:
+gImageReader is a simple Gtk/Qt front-end to tesseract-ocr.
 
-  · Automatic page layout detection
-  · User can manually define and adjust recognition regions
-  · Import images from disk, scanning devices, clipboard and screenshots
-  . Supports multipage PDF documents
+Features include:
+
+  · Import PDF documents and images from disk, scanning devices, clipboard and screenshots
+  · Process multiple images and documents in one go
+  · Manual or automatic recognition area definition
+  · Recognize to plain text or to hOCR documents
   · Recognized text displayed directly next to the image
-  · Basic editing of output text, including search/replace and removing
-    line breaks
-  · Spellchecking for output text (if corresponding dictionary installed)
+  · Post-process the recognized text, including spellchecking
+  · Generate PDF documents from hOCR documents
 
 This package contains the Qt4 front-end.
 
@@ -113,16 +115,17 @@ Summary:	A Qt5 front-end to tesseract-ocr
 Requires:	%{name}-shared = %{version}-%{release}
 
 %description qt5
-gImageReader is a simple front-end to tesseract. Features include:
+gImageReader is a simple Gtk/Qt front-end to tesseract-ocr.
 
-  · Automatic page layout detection
-  · User can manually define and adjust recognition regions
-  · Import images from disk, scanning devices, clipboard and screenshots
-  . Supports multipage PDF documents
+Features include:
+
+  · Import PDF documents and images from disk, scanning devices, clipboard and screenshots
+  · Process multiple images and documents in one go
+  · Manual or automatic recognition area definition
+  · Recognize to plain text or to hOCR documents
   · Recognized text displayed directly next to the image
-  · Basic editing of output text, including search/replace and removing
-    line breaks
-  · Spellchecking for output text (if corresponding dictionary installed)
+  · Post-process the recognized text, including spellchecking
+  · Generate PDF documents from hOCR documents
 
 This package contains the Qt5 front-end.
 
@@ -158,11 +161,11 @@ Shared files files for %{name}.
 %setup -q
 
 # -std=c++11 is not compatible with clang (but only with clang++)
-%__sed -i -e '/ADD_DEFINITIONS(-std=c++11)/d' CMakeLists.txt
+sed -i -e '/ADD_DEFINITIONS(-std=c++11)/d' CMakeLists.txt
 
 # set gtk, qt4 and qt5 branch
 mkdir build-gtk
-%__find . -maxdepth 1 -mindepth 1	\
+find . -maxdepth 1 -mindepth 1	\
 	-not -name ./build-gtk		\
 	-and -not -name README		\
 	-and -not -name README.md	\
