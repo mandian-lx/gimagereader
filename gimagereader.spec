@@ -19,6 +19,7 @@ BuildRequires:	appstream-util
 BuildRequires:	cmake
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
+BuildRequires:	gomp-devel
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(tesseract)
 BuildRequires:	pkgconfig(sane-backends)
