@@ -6,7 +6,7 @@
 %define tname gImageReader
 %define oname %(echo %{tname} | tr [:upper:] [:lower:] )
 
-Summary:	A simple Gtk/Qt front-end to tesseract-ocr.
+Summary:	A simple Gtk/Qt front-end to tesseract-ocr
 Name:		%{oname}
 Version:	3.1.2
 Release:	0
