@@ -178,11 +178,11 @@ cp -a build-gtk build-qt5
 %build
 # -std=c++11 is not compatible with clang (but only with clang++)
 #export CXXFLAGS="${optflags} -std=c++11" #-fopenmp
-export CFLAGS="${optflags} -fopenmp"
+#export CFLAGS="${optflags} -fopenmp"
 
-#export CC=gcc
-#export CXX=g++
-#export CXXFLAGS="${optflags} -std=c++11 -std=gnu99"
+export CC=gcc
+export CXX=g++
+export CXXFLAGS="${optflags} -std=c++11 -std=gnu99"
 
 # build
 for i in gtk qt4 qt5
