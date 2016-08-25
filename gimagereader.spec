@@ -32,11 +32,11 @@ BuildRequires:	pkgconfig(poppler-glib)
 # qt4 interface
 BuildRequires:	pkgconfig(poppler-qt4)
 BuildRequires:	pkgconfig(QtCore)
-BuildRequires:	pkgconfig(QtSpell-qt4)
+BuildRequires:	qtspell-qt4-devel #pkgconfig(QtSpell-qt4)
 # qt5 interface
 BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(Qt5Widgets)
-BuildRequires:	pkgconfig(QtSpell-qt5)
+BuildRequires:	qtspell-qt5-devel #pkgconfig(QtSpell-qt5)
 #BuildRequires:	qt5-devel
 
 Requires:	hicolor-icon-theme
