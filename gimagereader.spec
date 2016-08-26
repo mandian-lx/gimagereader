@@ -36,7 +36,9 @@ BuildRequires:	pkgconfig(poppler-qt4)
 BuildRequires:	pkgconfig(QtCore)
 BuildRequires:	qtspell-qt4-devel #pkgconfig(QtSpell-qt4)
 # qt5 interface
+BuildRequires:	qmake5
 BuildRequires:	pkgconfig(poppler-qt5)
+BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	qtspell-qt5-devel #pkgconfig(QtSpell-qt5)
 #BuildRequires:	qt5-devel
