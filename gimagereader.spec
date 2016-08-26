@@ -14,6 +14,7 @@ License:	GPLv3+
 Group:		Office
 URL:		https://github.com/manisandro/%{name}
 Source0:	https://github.com/manisandro/%{tname}/releases/download/v%{version}/%{name}-%{version}.tar.xz
+Patch0:		%{name}-3.1.2-qt_pi.patch
 
 BuildRequires:	appstream-util
 BuildRequires:	cmake
@@ -163,6 +164,9 @@ Shared files files for %{name}.
 
 %prep
 %setup -q
+
+# Apply all patches
+%patch0 -p1 -b .orig
 
 # -std=c++11 is not compatible with clang (but only with clang++)
 sed -i -e '/ADD_DEFINITIONS(-std=c++11)/d' CMakeLists.txt

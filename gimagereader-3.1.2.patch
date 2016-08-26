@@ -1,0 +1,11 @@
+--- gimagereader-3.1.2.orig/qt/src/common.hh
++++ gimagereader-3.1.2/qt/src/common.hh
+@@ -23,4 +23,8 @@
+ #include <libintl.h>
+ #define _(x) QString(gettext(x))
+ 
++#ifndef M_PI
++#define M_PI 3.14159265358979323846
++#endif
++
+ #endif
