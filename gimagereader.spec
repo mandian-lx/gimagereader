@@ -197,7 +197,7 @@ cp -a build-gtk build-qt5
 
 export CC=gcc
 export CXX=g++
-export CXXFLAGS="${optflags} -std=c++11 -std=gnu99"
+export CXXFLAGS="${optflags} -std=c++11"
 
 # build
 for i in gtk qt4 qt5
