@@ -4,8 +4,10 @@
  #include <libintl.h>
  #define _(x) QString(gettext(x))
  
+-#endif
+\ No newline at end of file
 +#ifndef M_PI
 +#define M_PI 3.14159265358979323846
 +#endif
 +
- #endif
++#endif
