@@ -204,6 +204,7 @@ for i in gtk qt4 qt5
 do
 	pushd build-$i
 	%cmake \
+		-DCMAKE_BUILD_TYPE=debug \
 		-DINTERFACE_TYPE=$i			\
 		-DENABLE_VERSIONCHECK:BOOL=FALSE	\
 		-DMANUAL_DIR="%{_docdir}/%{name}-shared"
