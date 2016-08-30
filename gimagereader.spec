@@ -29,7 +29,7 @@ BuildRequires:	pkgconfig(sane-backends)
 BuildRequires:	pkgconfig(cairomm-1.0)
 BuildRequires:	pkgconfig(gtkmm-3.0)
 BuildRequires:	pkgconfig(gtksourceviewmm-3.0)
-BuildRequires:	pkgconfig(gtkspellmm-3.0) >= 3.0.4
+BuildRequires:	pkgconfig(gtkspellmm-3.0)
 BuildRequires:	pkgconfig(poppler-glib)
 # qt4 interface
 BuildRequires:	pkgconfig(poppler-qt4)
