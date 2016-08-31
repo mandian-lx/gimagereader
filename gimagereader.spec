@@ -8,7 +8,7 @@
 
 Summary:	A simple Gtk/Qt front-end to tesseract-ocr
 Name:		%{oname}
-Version:	3.1.1
+Version:	3.0.1
 Release:	0
 License:	GPLv3+
 Group:		Office
