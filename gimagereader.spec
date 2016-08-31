@@ -22,6 +22,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
 BuildRequires:	gomp-devel
 BuildRequires:	intltool
+BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:	pkgconfig(tesseract)
 BuildRequires:	pkgconfig(sane-backends)
 #BuildRequires:	libappstream-glib
